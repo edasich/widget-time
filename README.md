@@ -54,7 +54,7 @@ dateTimeSwitcher.setOnPreviousClickListener { switchMode, startDateTime, endDate
 ```
 
 ### Note 
-This library is using LocalDateTime, LocalDate and LocalTime which are part of `java.time` package.
+This library is using `LocalDateTime`, `LocalDate` and `LocalTime` which are part of `java.time` package.
 
 In order to use this library please read this official doc [core android library desugaring](https://developer.android.com/studio/write/java8-support#library-desugaring).
 
