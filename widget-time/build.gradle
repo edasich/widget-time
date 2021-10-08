@@ -11,7 +11,7 @@ android {
         minSdk 21
         targetSdk 31
         versionCode 1
-        versionName "1.0.0"
+        versionName "1.0.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -31,7 +31,7 @@ android {
         }
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '1.11'
     }
 }
 
@@ -43,7 +43,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.github.edasich'
                 artifactId = 'widget-time'
-                version = '1.0.0'
+                version = '1.0.1'
             }
         }
     }
