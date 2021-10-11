@@ -43,6 +43,13 @@ dateTimeSwitcher.adapter = object : DateTimeSwitcherAdapter() {
 }
 ```
 
+### Switch Mode Listener
+```kotlin
+dateTimeSwitcher.setOnSwitchChangedListener { switchMode, startDateTime, endDateTime ->
+    ..
+}
+```
+
 ### Next and Previous Listeners
 ```kotlin
 dateTimeSwitcher.setOnNextClickListener { switchMode, startDateTime, endDateTime ->
