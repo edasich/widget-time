@@ -22,7 +22,7 @@
             android:id="@+id/imgPrevious"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            app:srcCompat="@drawable/ic_arrow_left" />
+            app:srcCompat="@drawable/edasich_widget_time_ic_arrow_left" />
 
     </FrameLayout>
 
@@ -56,7 +56,7 @@
             android:id="@+id/imgNext"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            app:srcCompat="@drawable/ic_arrow_right" />
+            app:srcCompat="@drawable/edasich_widget_time_ic_arrow_right" />
 
     </FrameLayout>
 
