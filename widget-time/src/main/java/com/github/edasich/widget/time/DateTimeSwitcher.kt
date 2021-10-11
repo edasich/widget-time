@@ -26,6 +26,7 @@ class DateTimeSwitcher : ConstraintLayout {
     lateinit var startDateTime: LocalDateTime
     lateinit var endDateTime: LocalDateTime
 
+    private var switchChangedListener: OnSwitchChangedListener? = null
     private var nextClickListener: OnNextClickListener? = null
     private var previousClickListener: OnPreviousClickListener? = null
 
@@ -66,6 +67,10 @@ class DateTimeSwitcher : ConstraintLayout {
         }
 
         switchMode = SwitchMode.DAY
+    }
+
+    fun setOnSwitchChangedListener(listener: OnSwitchChangedListener) {
+        switchChangedListener = listener
     }
 
     fun setOnNextClickListener(listener: OnNextClickListener) {
@@ -119,6 +124,11 @@ class DateTimeSwitcher : ConstraintLayout {
                 )
             }
         }
+        switchChangedListener?.onSwitchChanged(
+            switchMode = switchMode,
+            startDateTime = startDateTime,
+            endDateTime = endDateTime
+        )
     }
 
     private fun updateTitle() {
@@ -228,6 +238,14 @@ class DateTimeSwitcher : ConstraintLayout {
             switchMode = switchMode,
             startDateTime = startDateTime,
             endDateTime = endDateTime
+        )
+    }
+
+    fun interface OnSwitchChangedListener {
+        fun onSwitchChanged(
+            switchMode: SwitchMode,
+            startDateTime: LocalDateTime,
+            endDateTime: LocalDateTime
         )
     }
 

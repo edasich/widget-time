@@ -1,12 +1,9 @@
 package com.github.edasich.widget
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.github.edasich.widget.databinding.ActivityMainBinding
-import com.github.edasich.widget.time.DateTimeSwitcher
 import com.github.edasich.widget.time.SwitchMode
-import java.time.LocalDateTime
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,6 +29,8 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
+        }
+        layout.dateTimeSwitcher.setOnSwitchChangedListener { switchMode, startDateTime, endDateTime ->
         }
         layout.dateTimeSwitcher.setOnNextClickListener { switchMode, startDateTime, endDateTime ->
         }
