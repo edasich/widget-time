@@ -104,12 +104,13 @@ class DateTimeSwitcher : ConstraintLayout {
                 )
             }
             SwitchMode.MONTH -> {
+                val targetDateTime = DateTime.getCurrentDate()
                 startDateTime = DateTime.getDateTime(
-                    date = DateTime.getMonthsAgo(months = 1).toLocalDate(),
+                    date = targetDateTime.withDayOfMonth(1),
                     time = LocalTime.MIN
                 )
                 endDateTime = DateTime.getDateTime(
-                    date = DateTime.getCurrentDate(),
+                    date = targetDateTime.withDayOfMonth(targetDateTime.lengthOfMonth()),
                     time = LocalTime.MAX
                 )
             }
@@ -162,12 +163,14 @@ class DateTimeSwitcher : ConstraintLayout {
                 )
             }
             SwitchMode.MONTH -> {
+                val targetDate =
+                    DateTime.getMonthsLater(months = 1, from = startDateTime).toLocalDate()
                 startDateTime = DateTime.getDateTime(
-                    date = DateTime.getMonthsLater(months = 1, from = startDateTime).toLocalDate(),
+                    date = targetDate.withDayOfMonth(1),
                     time = LocalTime.MIN
                 )
                 endDateTime = DateTime.getDateTime(
-                    date = DateTime.getMonthsLater(months = 1, from = endDateTime).toLocalDate(),
+                    date = targetDate.withDayOfMonth(targetDate.lengthOfMonth()),
                     time = LocalTime.MAX
                 )
             }
@@ -213,12 +216,14 @@ class DateTimeSwitcher : ConstraintLayout {
                 )
             }
             SwitchMode.MONTH -> {
+                val targetDate =
+                    DateTime.getMonthsAgo(months = 1, from = startDateTime).toLocalDate()
                 startDateTime = DateTime.getDateTime(
-                    date = DateTime.getMonthsAgo(months = 1, from = startDateTime).toLocalDate(),
+                    date = targetDate.withDayOfMonth(1),
                     time = LocalTime.MIN
                 )
                 endDateTime = DateTime.getDateTime(
-                    date = DateTime.getMonthsAgo(months = 1, from = endDateTime).toLocalDate(),
+                    date = targetDate.withDayOfMonth(targetDate.lengthOfMonth()),
                     time = LocalTime.MAX
                 )
             }
