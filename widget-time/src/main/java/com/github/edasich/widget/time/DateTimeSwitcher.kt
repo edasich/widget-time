@@ -95,7 +95,7 @@ class DateTimeSwitcher : ConstraintLayout {
             }
             SwitchMode.WEEK -> {
                 startDateTime = DateTime.getDateTime(
-                    date = DateTime.getWeeksAgo(weeks = 1).toLocalDate(),
+                    date = DateTime.getDaysAgo(days = 6).toLocalDate(),
                     time = LocalTime.MIN
                 )
                 endDateTime = DateTime.getDateTime(
@@ -154,11 +154,11 @@ class DateTimeSwitcher : ConstraintLayout {
             }
             SwitchMode.WEEK -> {
                 startDateTime = DateTime.getDateTime(
-                    date = DateTime.getWeeksLater(weeks = 1, from = startDateTime).toLocalDate(),
+                    date = DateTime.getDaysLater(days = 6, from = startDateTime).toLocalDate(),
                     time = LocalTime.MIN
                 )
                 endDateTime = DateTime.getDateTime(
-                    date = DateTime.getWeeksLater(weeks = 1, from = endDateTime).toLocalDate(),
+                    date = DateTime.getDaysLater(days = 6, from = endDateTime).toLocalDate(),
                     time = LocalTime.MAX
                 )
             }
@@ -207,11 +207,11 @@ class DateTimeSwitcher : ConstraintLayout {
             }
             SwitchMode.WEEK -> {
                 startDateTime = DateTime.getDateTime(
-                    date = DateTime.getWeeksAgo(weeks = 1, from = startDateTime).toLocalDate(),
+                    date = DateTime.getDaysAgo(days = 6, from = startDateTime).toLocalDate(),
                     time = LocalTime.MIN
                 )
                 endDateTime = DateTime.getDateTime(
-                    date = DateTime.getWeeksAgo(weeks = 1, from = endDateTime).toLocalDate(),
+                    date = DateTime.getDaysAgo(days = 6, from = endDateTime).toLocalDate(),
                     time = LocalTime.MAX
                 )
             }
