@@ -1,5 +1,6 @@
 # Android Widgets Time
 [![](https://jitpack.io/v/edasich/widget-time.svg)](https://jitpack.io/#edasich/widget-time)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ### Dependency
 ```gradle
